@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>{{ name }}'s Watchlist</title>
+    <title>{{ name }}' Watchlist</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 <body>
     <h2>{{ name }}'s Watchlist</h2>
@@ -13,8 +14,20 @@
         <li>{{ movie.title }} - {{ movie.year }}</li>  {# 等同于 movie['title'] #}
         {% endfor %}  {# 使用 endfor 标签结束 for 语句 #}
     </ul>
+    <
     <footer>
         <small>&copy; 2018 <a href="http://helloflask.com/tutorial">HelloFlask</a></small>
     </footer>
+    <img id ='gen' alt="cs" src="{{ url_for('static', filename='images/foo.gif') }}">
+    <style type="text/css">
+        #gen
+        {
+            position: relative;
+            top: 10px;
+            width: 160px;
+            height:150px;
+            transform:rotate(-90deg);
+        }
+    </style>
 </body>
 </html>
